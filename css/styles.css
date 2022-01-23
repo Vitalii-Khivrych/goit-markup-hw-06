@@ -594,7 +594,8 @@ body {
 	margin-left: 10px;
 }
 
-.footer-btn {
+.footer-btn,
+.modal-btn {
 	width: 200px;
 	height: 50px;
 	border: none;
@@ -613,11 +614,14 @@ body {
 }
 
 .footer-btn:hover,
-.footer-btn:focus {
+.modal-btn:hover,
+.footer-btn:focus,
+.modal-btn:focus {
 	background: #188ce8;
 }
 
-.footer-btn-text {
+.footer-btn-text,
+.modal-btn {
 	font-family: inherit;
 	font-weight: 700;
 	font-size: 16px;
@@ -899,4 +903,59 @@ body {
 
 .form-text::placeholder {
 	color: rgba(117, 117, 117, 0.5);
+}
+
+.input-policy-text,
+.policy-link {
+	font-size: 14px;
+	line-height: calc(24 / 14);
+	color: var(--text-colore);
+}
+
+.input-policy-text {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.policy-link {
+	color: var(--active-colore);
+	text-decoration-line: underline;
+}
+
+.input-policy-text span {
+	width: 16px;
+	height: 15px;
+	border: 2px solid var(--titel-colore);
+	border-radius: 2px;
+	margin-right: 7px;
+	display: flex;
+	align-items: center;
+}
+
+.policy-icon {
+	fill: transparent;
+}
+
+.input-policy:checked + .input-policy-text span {
+	border: none;
+	background-color: var(--active-colore);
+}
+
+.input-policy:checked + .input-policy-text .policy-icon {
+	fill: var(--white-colore);
+}
+
+.btn-between {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+}
+
+.form-comments {
+	margin-bottom: 20px;
+}
+
+.form-field:last-child {
+	margin-bottom: 0;
 }
